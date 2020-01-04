@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/creativetimofficial/pk2-angular.git"
   },
+  "engines": {
+    "node": "10.10.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,7 +17,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "postinstall": "ng build --aot -prod"
   },
   "dependencies": {
     "@angular/animations": "7.2.0",
@@ -35,6 +40,7 @@
     "popper.js": "1.14.4",
     "rxjs": "6.2.2",
     "rxjs-compat": "6.2.2",
+    "typescript": "3.2.2",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
